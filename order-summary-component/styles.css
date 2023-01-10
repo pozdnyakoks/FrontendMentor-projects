@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('./img/pattern-background-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--pale-blue);
+  font-family: 'Red Har Display', sans-serif;
+  font-size: 16px;
+}
+
+.card {
+  margin: 50px auto;
+  overflow: hidden;
+  width: 450px;
+  background-color: white;
+  color: var(--desaturated-blue);
+  border-radius: 20px;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+}
+
+.container > * {
+  margin: 13px 0;
+}
+
+.title {
+  color: var(--dark-blue);
+  font-weight: 900;
+  font-size: 32px;
+}
+
+.order-descr {
+  line-height: 25px;
+}
+
+.plan-container {
+  font-size: 16px;
+  background-color: var(--very-pale-blue);
+  padding: 25px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan-container a {
+  color: var(--bright-blue);
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.plan-container a:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.plan-container strong {
+  color: var(--dark-blue);
+}
+
+.plan-descr {
+  line-height: 20px;
+  margin-right: 75px;
+}
+
+.btn {
+  width: 100%;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+}
+
+.proceed-btn {
+  background-color: var(--bright-blue);
+  padding: 1rem 0;
+  color: white;
+  box-shadow: 0 20px 10px -8px rgb(197 189 245);
+  transition: 0.3s ease;
+}
+
+.proceed-btn:hover {
+  opacity: 0.7;
+}
+
+.cancel-btn {
+  background-color: white;
+  color: var(--desaturated-blue);
+
+  margin-top: 22px;
+}
+
+.cancel-btn:hover {
+  color: black;
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 300px;
+  }
+
+  .container {
+    padding: 10px 15px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .plan-container {
+    padding: 15px;
+    font-size: 13px;
+  }
+
+  .plan-descr {
+    margin-right: 10px;
+    text-align: left;
+  }
+
+  .cancel-btn {
+    margin-top: 10px;
+  }
+}
